@@ -12,7 +12,7 @@ public class SortArray {
             System.out.print("Enter the elements : ");
             arr[i] = in.nextInt();
         }
-        Sort arrays = new InsertionSort();
+        Sort arrays = new MergeSort();
         arrays.sort(arr);
         System.out.println(Arrays.toString(arr));
     }
