@@ -1,6 +1,7 @@
 package arrays;
 
 import java.util.Arrays;
+import java.util.TreeSet;
 
 public class ArrayProblemBruteForce implements Problem {
     // BruteForce
@@ -22,4 +23,20 @@ public class ArrayProblemBruteForce implements Problem {
         System.out.println((!status) ? -1 : secondLargest);
     }
 
+    public void removeDuplicateInSortedArr(int[] arr){
+        int len = arr.length;
+        TreeSet<Integer> set = new TreeSet<>();
+        for(int e : arr){
+            set.add(e);
+        }
+        int index = 0;
+        for(int e : set){
+            arr[index] = e;
+            index++;
+        }
+        for(int i = index ; i < len ; i++){
+            arr[i] = -1;
+        }
+        System.out.println(Arrays.toString(arr));
+    }
 }

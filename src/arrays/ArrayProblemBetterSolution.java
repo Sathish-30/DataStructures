@@ -22,4 +22,6 @@ public class ArrayProblemBetterSolution implements Problem{
         // So it totally runs for O(N + N)
         System.out.println(secondLargest);
     }
+
+
 }

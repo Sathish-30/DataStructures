@@ -11,7 +11,11 @@ public class ArrayImplementation {
         for(int i = 0 ; i < n ; i++){
             arr[i] = in.nextInt();
         }
-        Problem ap = new ArrayProblemOptimalSolution();
-        ap.secondLargest(arr);
+        ArrayProblemOptimalSolution ap = new ArrayProblemOptimalSolution();
+        ArrayProblemBruteForce br = new ArrayProblemBruteForce();
+        boolean res = ap.checkSortedArray(arr);
+        if(res){
+            br.removeDuplicateInSortedArr(arr);
+        }
     }
 }
