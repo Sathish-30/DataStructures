@@ -1,5 +1,7 @@
 package arrays;
 
+import java.util.Arrays;
+
 public class ArrayProblemOptimalSolution implements Problem{
 
     // The TC of the Below code is O(N)
@@ -57,5 +59,31 @@ public class ArrayProblemOptimalSolution implements Problem{
                 i = i + 1;
             }
         }
+    }
+
+    // Left rotate
+    public void rotateLeft(int[] arr , int d){
+        int len = arr.length;
+        swap(arr , 0 , d - 1);
+        swap(arr , d , len - 1);
+        swap(arr , 0 , len - 1);
+        System.out.println(Arrays.toString(arr));
+    }
+
+    public void swap(int[] arr , int start , int end){
+        int mid = (start + end) / 2;
+        for(int i = start  , j = end ; i <= mid ; i++ , j--){
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        }
+    }
+
+    public void rotateRight(int[] arr , int d){
+        int len = arr.length;
+        swap(arr , len - d , len - 1);
+        swap(arr , 0 , len - d - 1);
+        swap(arr , 0 , len - 1);
+        System.out.println(Arrays.toString(arr));
     }
 }
