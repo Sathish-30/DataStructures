@@ -1,8 +1,8 @@
-package arrays;
+package arrays.lesson1;
 
 import java.util.Arrays;
 
-public class ArrayProblemBetterSolution implements Problem{
+public class ArrayProblemBetterSolution implements Problem {
     public void secondLargest(int[] arr){
         // TC O(2N)
         int largest = arr[0];

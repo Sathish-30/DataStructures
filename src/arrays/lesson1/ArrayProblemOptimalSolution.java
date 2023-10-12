@@ -1,8 +1,8 @@
-package arrays;
+package arrays.lesson1;
 
 import java.util.Arrays;
 
-public class ArrayProblemOptimalSolution implements Problem{
+public class ArrayProblemOptimalSolution implements Problem {
 
     // The TC of the Below code is O(N)
     public void secondLargest(int[] arr){
@@ -27,7 +27,7 @@ public class ArrayProblemOptimalSolution implements Problem{
             if(arr[i] < smallest){
                 secondSmall = smallest;
                 smallest = arr[i];
-            }else if(arr[i] < secondSmall && arr[i] > smallest){
+            }else if(arr[i] != smallest && arr[i] < secondSmall){
                 secondSmall = arr[i];
             }
         }
